@@ -39,7 +39,10 @@ public class Main extends Application {
 			stage.setTitle("Insuline/Glucagon Pump");
 			Pane mainPane = loadMainPane();
 			Scene scene = new Scene(mainPane);
+			scene.getStylesheets().add
+					(Main.class.getResource("background.css").toExternalForm());
 			stage.setScene(scene);
+
 			stage.show();
 
 			prepareTimeline();

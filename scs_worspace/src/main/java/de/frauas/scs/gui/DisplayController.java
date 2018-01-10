@@ -148,6 +148,16 @@ public class DisplayController {
 	@FXML
 	private TextField readjustmentPositiveInjectionBoundary;
 
+	@FXML
+	private Text logintext;
+
+	@FXML
+	private Label usertext;
+
+	@FXML
+	private Label passwordtext;
+
+
 	private Series<Number, Number> series;
 
 	@FXML
@@ -195,23 +205,33 @@ public class DisplayController {
 		if(user.getText().equals("doctor")&&password.getText().equals("password")&&loginButton.getText().equals("Sign In")){
 			doctorpane.setVisible(true);
 			loginButton.setText("Sign Out");
-			messageBox.setTextFill(Color.GREEN);
-			messageBox.setText("Doctors's Panel Opened");
-			messageBox.setVisible(true);
+			password.setText("");
+			user.setText("");
+			logintext.setVisible(false);
+			usertext.setVisible(false);
+			passwordtext.setVisible(false);
+			password.setVisible(false);
+			user.setVisible(false);
+			actiontarget.setVisible(false);
+
 
 
 		}
 		else if(loginButton.getText().equals("Sign Out")){
 			doctorpane.setVisible(false);
 			loginButton.setText("Sign In");
-			messageBox.setTextFill(Color.GREEN);
-			messageBox.setText("Signed Out Successfully");
-			messageBox.setVisible(true);
+			logintext.setVisible(true);
+			usertext.setVisible(true);
+			passwordtext.setVisible(true);
+			password.setVisible(true);
+			user.setVisible(true);
+			actiontarget.setVisible(false);
+
 		}
 		else{
-			messageBox.setTextFill(Color.RED);
-			messageBox.setText("Wrong Credentials.");
-			messageBox.setVisible(true);
+			actiontarget.setFill(Color.RED);
+			actiontarget.setText("Wrong Credentials.");
+			actiontarget.setVisible(true);
 		}
 
 	}
@@ -247,6 +267,7 @@ public class DisplayController {
 		bindProperties();
 		messageBox.setVisible(false);
 		series = new XYChart.Series<Number, Number>();
+		lineChart.setStyle("-fx-stroke: #989898; -fx-stroke-width: 1px; ");
 		lineChart.getData().addAll(series);
 		glucoseLevelSimulator.start();
 		pancreasSimulator.start();
