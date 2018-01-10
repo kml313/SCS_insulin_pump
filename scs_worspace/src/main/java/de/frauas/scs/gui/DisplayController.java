@@ -267,8 +267,8 @@ public class DisplayController {
 		bindProperties();
 		messageBox.setVisible(false);
 		series = new XYChart.Series<Number, Number>();
-		lineChart.setStyle("-fx-stroke: #989898; -fx-stroke-width: 1px; ");
 		lineChart.getData().addAll(series);
+		series.getNode().setStyle("-fx-stroke: #989898; -fx-stroke-width: 2px; ");
 		glucoseLevelSimulator.start();
 		pancreasSimulator.start();
 		doctorpane.setVisible(false);
