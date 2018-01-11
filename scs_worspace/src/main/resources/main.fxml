@@ -152,6 +152,11 @@
                                               <CheckBox fx:id="simulationCheckBox" alignment="CENTER_RIGHT" allowIndeterminate="false" contentDisplay="LEFT" minWidth="-Infinity" mnemonicParsing="false" selected="false" text="Pump Activated" textAlignment="LEFT" underline="false" wrapText="false" />
                                           </children>
                                       </HBox>
+                                      <HBox id="HBox" alignment="CENTER_LEFT" spacing="15.0" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                                          <children>
+                                              <CheckBox fx:id="needle_removed" minWidth="-Infinity" mnemonicParsing="false" selected="true" text="Needles" />
+                                          </children>
+                                      </HBox>
                                   </children>
                                   <columnConstraints>
                                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="390.0" minWidth="10.0" prefWidth="196.0" />

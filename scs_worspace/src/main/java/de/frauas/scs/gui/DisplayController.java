@@ -173,6 +173,9 @@ public class DisplayController {
 	private CheckBox throwError;
 
 	@FXML
+	private CheckBox needle_removed;
+
+	@FXML
 	private NumberAxis xAxis;
 
 	private double xSeriesData = 0;
@@ -307,6 +310,22 @@ public class DisplayController {
 		{
 			series.getData().remove(0, series.getData().size()
 					- NUM_OF_X_AXIS_SLICES);
+		}
+		if(consumeButton.isDisabled()){
+			needle_removed.setDisable(true);
+		}
+		try {
+			if (!needle_removed.isSelected()) {
+				simulationCheckBox.setSelected(false);
+				throw new RuntimeException();
+
+			}
+			else {
+				messageBox.setText("");
+				messageBox.setVisible(false);
+			}
+		}catch (RuntimeException e){
+			printError("Needle removed");
 		}
 
 		updateTimeStamp();
