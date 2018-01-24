@@ -205,7 +205,7 @@ public class DisplayController {
 	@FXML
 	public void login(ActionEvent e) throws IOException {
 
-	/*	if(user.getText().equals("doctor")&&password.getText().equals("password")&&loginButton.getText().equals("Sign In")){
+	if(user.getText().equals("doctor")&&password.getText().equals("password")&&loginButton.getText().equals("Sign In")){
 			doctorpane.setVisible(true);
 			loginButton.setText("Sign Out");
 			password.setText("");
@@ -236,12 +236,11 @@ public class DisplayController {
 			actiontarget.setText("Wrong Credentials.");
 			actiontarget.setVisible(true);
 		}
-*/
 	}
 	@FXML
 	public void consume(ActionEvent e)
 	{
-		/*try
+		try
 		{
 			double amountToConsume = 0;
 			amountToConsume = getAmountToConsume();
@@ -255,7 +254,7 @@ public class DisplayController {
 			messageBox.setText(MessageBoxText.NOT_A_NUMBER_ERROR.getText());
 			messageBox.setVisible(true);
 		}
-		consumptionField.setText("");*/
+		consumptionField.setText("");
 	}
 	@FXML
 	public void start(ActionEvent e){
@@ -321,10 +320,7 @@ public class DisplayController {
 				throw new RuntimeException();
 
 			}
-			else {
-				messageBox.setText("");
-				messageBox.setVisible(false);
-			}
+
 		}catch (RuntimeException e){
 			printError("Needle removed");
 		}

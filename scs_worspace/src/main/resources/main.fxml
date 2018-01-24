@@ -252,7 +252,7 @@
               <children>
                 <HBox id="HBox" alignment="TOP_LEFT" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
                   <children>
-                    <Label prefWidth="270.0" text="Upper Non-Balancing Boundary:" HBox.hgrow="NEVER" />
+                    <Label prefWidth="270.0" text="Upper normal level:" HBox.hgrow="NEVER" />
                     <TextField fx:id="balancingRangeMaximum" maxWidth="-Infinity" prefWidth="50.0" promptText="" text="6" />
                     <Label prefWidth="56.0" text="mmol/L">
                       <HBox.margin>
@@ -266,7 +266,7 @@
                 </HBox>
                 <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
                   <children>
-                    <Label minHeight="-1.0" prefWidth="270.0" text="Lower Non-Balancing Boundary:" />
+                    <Label minHeight="-1.0" prefWidth="270.0" text="Lower normal level:" />
                     <TextField fx:id="balancingRangeMinimum" maxWidth="-Infinity" prefWidth="50.0" promptText="" text="5" />
                     <Label prefWidth="59.0" text="mmol/L" />
                   </children>
@@ -276,14 +276,14 @@
                 </HBox>
                 <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.margin="$x5" GridPane.rowIndex="1">
                   <children>
-                    <Label prefHeight="-1.0" prefWidth="270.0" text="Readjustment Glucagon Injections from:" wrapText="true" />
+                    <Label prefHeight="-1.0" prefWidth="270.0" text="Glucagon Injections from:" wrapText="true" />
                     <TextField id="balancingRangeMinimum" fx:id="readjustmentNegativeInjectionBoundary" maxWidth="-Infinity" prefWidth="50.0" text="8" />
                     <Label prefWidth="59.0" text="mmol/L" />
                   </children>
                 </HBox>
                 <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="0" GridPane.margin="$x2" GridPane.rowIndex="1">
                   <children>
-                    <Label prefHeight="-1.0" prefWidth="270.0" text="Readjustment Insulin Injections from:" wrapText="true" />
+                    <Label prefHeight="-1.0" prefWidth="270.0" text="Insulin Injections from:" wrapText="true" />
                     <TextField id="readjustmentNegativeInjectionBoundary" fx:id="readjustmentPositiveInjectionBoundary" maxWidth="-Infinity" prefWidth="50.0" text="5.5" />
                     <Label prefWidth="56.0" text="mmol/L" />
                   </children>
